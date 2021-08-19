@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact-style.css">
+    <script type="text/javascript" defer="defer" src="js/contact.js"></script>
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <a class="logo" href="#">Gallery</a>
+        </div>
+        <ul class="nav-link" id="nav-link">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Products</a>
+                <ul class="sub-menu">
+                    <li><a href="details-1.html">Sky</a></li>
+                    <li><a href="details-2.html">Sea</a></li>
+                    <li><a href="details-3.html">Mountains</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html ">About Me</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+        <div class="burger" id="burger">
+            <div class="line"></div>
+        </div>
+    </nav>
+    <main>
+        <h1>Please fill out your contact info</h1>
+        <form>
+            <fieldset>
+                <legend>Contact Info</legend>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" onblur="nameval()"><br>
+                <small id="noname" class="name">Please fill out your name</small>
+                <small id="namemore100" class="name">Your name should not exceed 100 characters</small>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" onblur="emailval()"><br>
+                <small id="noemail" class="email">Please fill out your email</small>
+                <small id="emailmore100" class="email">Your email should not exceed 100 characters</small>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" onblur="subjectval()"><br>
+                <small id="nosubject">Please fill out the subject</small>
+                <small id="less50">Subject should not be shorter than 50 characters.</small>
+                <small id="more250">Subject should not exceed 250 characters</small>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" onblur="messageval()"></textarea>
+                <small id="nomessage">Please fill out your message</small>
+                <small id="messagemore500">Your message should not exceed 500 characters</small>
+                <input type="submit" id="send-message" name="send-message" value="Send Message" onclick="return formval();"><br>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2021 By Vo Pham Ha Dang</p>
+    </footer>
+</body>
+
+</html>

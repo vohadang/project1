@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/order-style.css">
+    <script defer="defer" src="js/order.js"></script>
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <a class="logo" href="#">Gallery</a>
+        </div>
+        <ul class="nav-link" id="nav-link">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Products</a>
+                <ul class="sub-menu">
+                    <li><a href="details-1.html">Sky</a></li>
+                    <li><a href="details-2.html">Sea</a></li>
+                    <li><a href="details-3.html">Mountains</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html ">About Me</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+        <div class="burger" id="burger">
+            <div class="line"></div>
+        </div>
+    </nav>
+    <main>
+        <h1>Please fill out your order info</h1>
+        <form>
+            <fieldset>
+                <legend>Order</legend>
+                <label>Choose an album</label>
+                <select id="albums" name="albums" onchange="albumval()">
+                    <option selected>Choose an album</option>
+                    <option>Sky Album</option>
+                    <option>Sea Album</option>
+                    <option>Mountain Album</option>
+                </select><span class="tag">&#65121;</span><br>
+                <small id="noalbum">Please choose an album</small>
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" onblur="nameval()"><span class="tag">&#65121;</span><br>
+                <small id="noname">Please fill out your name</small>
+                <small id="namemore100">Your name should not exceed 100 characters</small>
+                <label for="message">Message for receiver</label>
+                <textarea id="message" name="message" placeholder="Write something" onblur="messageval()"></textarea><br>
+                <small id="more200">Message should not exceed 200 characters</small>
+                <label>Accessory</label><br>
+                <input type="checkbox" id="birthday-card" name="birthday-card" value="Birthday">
+                <label for="birthday-card">Birthday card</label><br>
+                <input type="checkbox" id="digital" name="digital" value="Digital">
+                <label for="digital">Digital version</label><br>
+                <input type="checkbox" id="giftcard" name="giftcard" value="Giftcard">
+                <label for="giftcard">Giftcard</label><br>
+                <label for="delivery-date">Delivery date</label>
+                <input type="date" id="delivery-date" name="delivery-date" onchange="dateval()"><span class="tag">&#65121;</span><br>
+                <small id="nodate">Please enter a date</small>
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" onblur="addrval()"><span class="tag">&#65121;</span><br>
+                <small id="noaddress">Please fill out the address</small>
+                <small id="more500">Address should not exceed 500 characters</small>
+                <label>Call before delivery?</label><span class="tag">&#65121;</span><br>
+                <input type="radio" id="yes" name="call" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="call" value="no">
+                <label for="no">No</label><br>
+                <small id="option">Please select an option</small>
+                <input type="submit" id="buy" name="buy" value="Order Now" onclick="return formval()">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2021 By Vo Pham Ha Dang</p>
+    </footer>
+</body>
+
+</html>
